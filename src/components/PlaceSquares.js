@@ -13,7 +13,8 @@ function placeEnemy() {
     do {
       x = positionTable[Math.floor(Math.random() * positionTable.length)]
       y = positionTable[Math.floor(Math.random() * positionTable.length)]
-    } while (arr.find(w => w.x == x && w.y == y) || (x == 0 && y == 0))
+      // eslint-disable-next-line
+    } while (arr.find(w => w.x === x && w.y === y) || (x === 0 && y === 0))
     arr.push({ x, y, check: false, index: i })
   }
   return arr
@@ -24,6 +25,7 @@ function checkIfWin(enemy) {
     if (el.check) {
       return true
     }
+    return false
   })
 }
 
@@ -53,14 +55,15 @@ function PlaceSquares() {
       }
     } else if (event.key === ' ') {
       const enemyFind = enemy.find(el => {
-        if (el.x == x && el.y == y) {
+        if (el.x === x && el.y === y) {
           return true
         }
+        return false
       })
       if (enemyFind) {
         setEnemy(
           enemy.map(el => {
-            if (el.x == x && el.y == y) {
+            if (el.x === x && el.y === y) {
               return { ...el, check: true }
             } else {
               return el

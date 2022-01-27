@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 function Square({ x, y }) {
   return (
     <div
