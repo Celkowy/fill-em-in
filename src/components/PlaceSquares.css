@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans&display=swap');
+
+.square {
+  background-color: red;
+}
+
+.container {
+  background-color: blue;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.win {
+  color: white;
+
+  font-size: 32px;
+}
+
+button {
+  margin-top: 15px;
+  border: 2px solid red;
+  padding: 5px 15px;
+  cursor: pointer;
+}
